@@ -19,3 +19,23 @@ Fold 5: 3.5038
 Mean Quadratic RMSE: 4.1944
 
 Conclusion: Quadratic Regression performs better.
+
+
+TASK 3: CONCRETE STRENGTH MODEL
+--------------------------------
+Rows after duplicate removal: 1005
+Training rows: 804
+Testing rows: 201
+Baseline CV RMSE: 10.2019 MPa
+Tuned CV RMSE: 6.0939 MPa
+Best parameters: {'polynomial__degree': 3, 'ridge__alpha': 0.1}
+Test RMSE: 6.5167 MPa
+Test MAE: 4.6697 MPa
+
+Top three settings:
+Degree: 3, Alpha: 0.1, Mean CV RMSE: 6.0939 MPa
+Degree: 3, Alpha: 0.01, Mean CV RMSE: 6.1635 MPa
+Degree: 3, Alpha: 1.0, Mean CV RMSE: 6.2738 MPa
+
+Degree-2 interaction example: Cement multiplied by Water.
+Scaling is inside the pipeline to prevent data leakage. Each CV training fold learns its own scaling values.
